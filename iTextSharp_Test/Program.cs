@@ -2,7 +2,6 @@
 using iText.Kernel.Pdf;
 using iText.Kernel.Pdf.Canvas;
 using System;
-using System.IO;
 using MessagingToolkit.QRCode.Codec;
 using System.Drawing;
 
@@ -33,6 +32,9 @@ namespace iTextSharp_Test
             PdfPage page;
             for (int i = 1; i <= pdfDoc.GetNumberOfPages(); i++)
             {
+                //hay que calcular el tamaño correcto de la imagen de acuerdo al archivo pdf
+                //ya que en algunos archivos sale de diferente tamaño.
+
                 //Aqui selecciono la pagina
                 page = pdfDoc.GetPage(i);
 
